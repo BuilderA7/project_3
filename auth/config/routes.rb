@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
     # get 'admins/new'
     # get 'admins/create'
- # root to: 'devise/sessions#new'
+ # root to: '/'
   devise_for :instructors
    resources :instructors
   devise_for :admins
