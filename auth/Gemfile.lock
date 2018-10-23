@@ -79,6 +79,8 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    countdown (0.1.0)
+      json
     crass (1.0.4)
     devise (4.5.0)
       bcrypt (~> 3.0)
@@ -99,6 +101,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    json (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -226,6 +229,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  countdown
   devise
   figaro
   jbuilder (~> 2.5)

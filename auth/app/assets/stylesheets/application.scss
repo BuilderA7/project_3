@@ -21,6 +21,10 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 body {
+  background-image: url("Meditating.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
@@ -29,8 +33,8 @@ p {
   line-height: 1.75;
 }
 
-a {
-  color: #fed136;
+a .nav {
+  color: "black";
 }
 
 a:hover {
@@ -75,6 +79,43 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
+/*
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+*/
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 30px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    position: center;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+
+/*
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+*/
 
 .btn {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -131,7 +172,7 @@ img::-moz-selection {
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
-  padding: 13px;
+  padding: 23px;
   text-transform: uppercase;
   color: white;
   border: 0;
@@ -141,6 +182,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
   color: #fed136;
+  font-size: 30px;
   font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -149,8 +191,8 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-size: 90%;
-  font-weight: 400;
+  font-size: 98%;
+  font-weight: 800;
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
@@ -699,7 +741,7 @@ ul.social-buttons li a {
   width: 50px;
   height: 50px;
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.7s;
   color: white;
   border-radius: 100%;
   outline: none;

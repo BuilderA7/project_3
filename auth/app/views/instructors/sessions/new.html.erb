@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    position: center;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+</style>
+
+
+</head>
+<body>
+<div class="card">
+  <div class="container">
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,3 +52,16 @@
 <% end %>
 
 <%= render "instructors/shared/links" %>
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
