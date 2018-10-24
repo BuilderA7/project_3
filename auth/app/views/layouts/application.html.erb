@@ -23,25 +23,35 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
     <!-- Custom styles for this template -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
-    .card {
+    .card1 {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    position: center;
+    
     }
 
     /* On mouse-over, add a deeper shadow */
-    .card:hover {
+    .card1:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
 
     /* Add some padding inside the card container */
-    .container {
+    .container1 {
     padding: 2px 16px;
+
     }
+    .med_btn {
+      background-color: "#f44b42";
+      font-weight: 400;
+    }
+    
     </style>
 
   </head>
@@ -50,26 +60,33 @@
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div>
+    <a class="nav">Next Meditation will begin in: <span id="time"></span></a>
+    <a class="nav">Time: <span id="current"></span> location: <span id="location"></span></a></div>
+  </div>
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Welcome to QuiteTime</a>
+        <a class="navbar-brand js-scroll-trigger" href="/">Welcome to QuiteTime</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">JoinUs</a>
-            </li>
-          </ul>
         </div>
       </div>
+      
     </nav>
     <div class="card">
   <div class="container">
-  <div><a class="nav"><span id="time"></span></a></div>
-  <div><a class="nav">Time: <span id="current"></span> location: <span id="location"></span></a></div>
-  </div>
 </div>
+<!-- <div  class="btn"> -->
+<script type="text/javascript">
+  window.onload = function(){
+  $(".med_btn").on("click", function(){
+    alert("Hello! I am an alert box!!");
+});
+}
+</script>
+            <button class="med_btn">Join Meditation</button>  
+<!-- </div> -->
   <!-- https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=YOUR_API_KEY -->
-
  <script type="text/javascript">
+
     var x = document.querySelector('#location');
 
     function getLocation() {
@@ -114,13 +131,37 @@
               display2 = document.querySelector('#current'); 
           startTimer(display, display2);
           getLocation();
+
       };
  </script>
-       
-     
+<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    </div>
+  </div>
+</div> -->
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
 
-<div class="card">
-  <div class="container">
+<div class="card1">
+  <div class="container1">
    <%= yield %>
   </div>
 </div>

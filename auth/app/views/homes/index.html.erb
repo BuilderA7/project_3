@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<%if(current_instructor || current_admin)%>
+<script type="text/javascript">
+  sweetAlert("Welcome to QuiteTime demo mode! Click next when you are ready to proceed.");
+</script>
+<h1> Welcome to QuietTime</h1>
+<%=form_tag(controller: "instructors", action: "create", method: "post", class: "students") do %>
+<h3>Add students</h3>
+<%= label_tag(:q, "Student's Full Name:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("add") %>
+<% end %>
+<h3>Your Students</h3>
+James Obrey
+<br>
+Marcus Talent
+<br>
+Samuel Doe
+<br>
+Amin Lenin
+<br>
+Isaiah Luke
+<br>
+Moses Ben
+<br>
+<%= link_to "Next", meditations_path %>
+<br>
+<%= link_to "Sign out", destroy_instructor_session_path, :method => :delete %>
+<%else%>
+<script type="text/javascript">
+  sweetAlert("Sign in to get started!");
+</script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2><a href="instructors/sign_in">Please sign in</a></h2>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<%end%>

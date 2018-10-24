@@ -1,0 +1,17 @@
+<%= form_with(model: meditation, local: true) do |form| %>
+  <% if meditation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(meditation.errors.count, "error") %> prohibited this meditation from being saved:</h2>
+
+      <ul>
+      <% meditation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <button>Submit Grades</button>
+  </div>
+<% end %>

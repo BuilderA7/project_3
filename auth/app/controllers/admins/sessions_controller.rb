@@ -7,11 +7,13 @@ class Admins::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
     super
-  end
-
+    redirect_to "instructors#index"
+  end 
+  
   # POST /resource/sign_in
   def create
     super
+    redirect_to "instructors#index"
   end
 
   # DELETE /resource/sign_out
