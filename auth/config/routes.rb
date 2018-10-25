@@ -10,15 +10,8 @@ Rails.application.routes.draw do
 #     end
 #   end
 # end
+  devise_for :instructors
   devise_for :admins
-  devise_for :instructors, controllers: {
-        sessions: 'instructors/sessions',
-        registrations: 'instructors/registrations',
-        passwords: 'instructors/passwords',
-        confirmations: 'instructors/confirmations',
-        mailer: 'instructors/mailer',
-        unlocks: 'instructors/unlocks',
-      }
    resources :instructors do
     resources :students
    end
@@ -27,3 +20,12 @@ Rails.application.routes.draw do
   end
  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # , controllers: {
+  #       sessions: 'instructors/sessions',
+  #       registrations: 'instructors/registrations',
+  #       passwords: 'instructors/passwords',
+  #       confirmations: 'instructors/confirmations',
+  #       mailer: 'instructors/mailer',
+  #       unlocks: 'instructors/unlocks',
+  #     }
