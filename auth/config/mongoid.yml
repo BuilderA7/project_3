@@ -78,7 +78,7 @@
 
          # The timeout to wait to execute operations on a socket before raising an error.
         # (default: 5)
-        socket_timeout: 10
+        # socket_timeout: 10
 
         # The name of the replica set to connect to. Servers provided as seeds that do
         # not belong to this replica set will be ignored.
@@ -131,10 +131,10 @@
     # duplicate_fields_exception: false
 
     # Use Active Support's time zone in conversions. (default: true)
-     use_activesupport_time_zone: true
+     # use_activesupport_time_zone: true
 
     # Ensure all times are UTC in the app side. (default: false)
-     use_utc: false
+     # use_utc: false
 
     # Set the Mongoid and Ruby driver log levels when not in a Rails
     # environment. The Mongoid logger will be set to the Rails logger
