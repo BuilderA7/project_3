@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
- devise_scope :instructors do
-  root to: "homes#index"
-end
 # root 'homes#index'
   resources :meditations
   resources :homes
@@ -25,5 +22,8 @@ end
    resources :instructors do
     resources :students
    end
+   devise_scope :instructors do
+    root to: "homes#index"
+  end
  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
