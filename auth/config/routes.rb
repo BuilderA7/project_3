@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  resources :meditations
  root to: "homes#index"
+  resources :meditations
   resources :homes
-authenticated :admin do 
-  resources :admins, module: "admin" do
-    member do
-      patch :publish
-      patch :unpublish
-    end
-  end
-end
+# authenticated :admin do 
+#   resources :admins, module: "admin" do
+#     member do
+#       patch :publish
+#       patch :unpublish
+#     end
+#   end
+# end
   devise_for :admins
   devise_for :instructors, controllers: {
         sessions: 'instructors/sessions',
