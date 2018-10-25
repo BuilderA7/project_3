@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :meditations
- root to: "homes#index"
+ # root to: "homes#index"
   resources :homes
 authenticated :admin do 
   resources :admins, module: "admin" do
