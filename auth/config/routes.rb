@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ root 'homes#index'
   resources :meditations
   resources :homes
 # authenticated :admin do 
@@ -22,5 +23,4 @@ Rails.application.routes.draw do
     resources :students
    end
  end
- root to: "homes#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
