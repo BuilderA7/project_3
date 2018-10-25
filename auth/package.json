@@ -2,12 +2,9 @@
   "name": "auth",
   "private": true,
   "dependencies": {
-    "startbootstrap-agency": "^5.0.2",
-
+    "startbootstrap-agency": "^5.0.2"
   },
   "scripts": {
     "start": "node server.js",
   },
-
-
 }

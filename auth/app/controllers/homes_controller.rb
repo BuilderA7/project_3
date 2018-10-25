@@ -5,9 +5,6 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
-    @instructors = "Instructor.all"
-    
-
     # if (current_instructor != nil || current_admin != nil )
 
     #     flash[:notice] = "Hello, you are in demo mode. Below you are able to enter in any additional students you would like to add to the meditation session. Otherwise the students that are assigned to the instructor will appear as in this example! Click next when you are ready to proceed."
@@ -23,7 +20,6 @@ class HomesController < ApplicationController
   # GET /homes/new
   def new
     @home = Home.new
-    render :alert => 'Alert message!'
   end
 
   # GET /homes/1/edit
