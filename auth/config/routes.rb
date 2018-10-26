@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
- root :to => "homes#index"
+ devise_scope :instructors do
+    root 'homes#index'
+ end
   resources :meditations
   resources :homes
-  # resources :admins
+  resources :admins
 # authenticated :admin do 
 #   resources :admins, module: "admin" do
 #     member do

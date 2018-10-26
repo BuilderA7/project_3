@@ -1,5 +1,6 @@
 class HomesController < ApplicationController
   before_action :set_home, only: [:show, :edit, :update, :destroy]
+  # root controller: :home, action: :index
 
   # GET /homes
   # GET /homes.json
